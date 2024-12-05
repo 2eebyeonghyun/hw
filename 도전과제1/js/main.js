@@ -48,8 +48,20 @@ function card(){
     });
 }
 
+function topbtn(){
+    let topBtn = document.querySelector('.topBtn');
+
+    topBtn.addEventListener('click', function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    })
+}
+
 btn();
 card();
+topbtn();
 
 
 

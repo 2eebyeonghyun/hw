@@ -2,13 +2,13 @@ $url: "../img/";
 
 // 메인컬러 설정
 $mColor: #c29525;
-$padding: 2.5rem 0;
+$padding: 5rem 0;
 
 // 미디어쿼리 설정
-$w480: 480px;
+$w1540: 1540px;
 
-@mixin w480 {
-    @media (max-width: #{$w480}) {
+@mixin w1540 {
+    @media (max-width: #{$w1540}) {
         @content;
     }
 }

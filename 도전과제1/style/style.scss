@@ -395,11 +395,68 @@
                             grid-template-columns: repeat(3, 1fr);
 
                             > li {
+                                position: relative;
                                 width: 100%;
                                 height: 500px;
                                 box-shadow: 2px 2px 15px rgba(0, 0, 0, 30%);
                                 border-radius: 5px;
                                 overflow: hidden;
+
+                                &:hover {
+
+                                    img {
+                                        filter: brightness(0.7);
+                                    }
+
+                                    .info__wr {
+                                        display: block;
+                                    }
+                                }
+
+                                img {
+                                    transition: all .3s ease-in-out;
+                                }
+
+                                .info__wr {
+                                    display: none;
+                                    position: absolute;
+                                    bottom: 2.5rem;
+                                    left: 2rem;
+                                    width: 20rem;
+                                    text-align: left;
+                                    transition: all .3s ease-in-out;
+
+                                    .member_name {
+                                        font-size: 1.8rem;
+                                        font-weight: 700;
+                                        color: #fff;
+                                        padding-bottom: .5rem;
+                                        display: block;
+                                    }
+
+                                    .member_job {
+                                        font-size: 1.5rem;
+                                        font-weight: 700;
+                                        color: #f00;
+                                        padding-bottom: 1.5rem;
+                                        display: block;
+                                    }
+
+                                    .member_info {
+                                        font-size: 1rem;
+                                        font-weight: 300;
+                                        line-height: 1.3;
+                                        color: #fff;
+                                        padding-bottom: 1.5rem;
+                                        display: block;
+                                    }
+
+                                    .btn {
+                                        text-transform: capitalize;
+                                        padding: 0.5rem 1.5rem;
+                                        font-weight: 300;
+                                    }
+                                }
                             }
                         }
                     }
@@ -521,6 +578,81 @@
             > a {
                 font-size: 1.5rem;
                 color: #a7a7a7;
+            }
+        }
+    }
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: $mColor;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@include w1540 {
+
+    .sideBar_wr {
+
+        &.active {
+            width: 30rem;
+        }
+
+        .top_wr {
+            margin-bottom: 3rem;
+        }
+
+        .content_wr {
+            height: calc(100% - 140px - 3rem);
+
+            .list {
+
+                > li {
+                    margin-bottom: 1.5rem;
+
+                    > a {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            .social_list {
+
+                > li {
+                    margin-right: 3rem;
+
+                    > a {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+
+        .section {
+
+            &.section02 {
+
+                .cont {
+
+                    &.cont1 {
+
+                        .content {
+                            height: 65vh;
+                        }
+                    }
+                }
             }
         }
     }
